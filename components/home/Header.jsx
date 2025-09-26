@@ -2,12 +2,23 @@
 
 import Image from "next/image"
 import Link from "next/link"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 
 const Header = () => {
 
-    const [showHeader, setShowHeader] = useState(false);
+    const [showMenuMobil, setShowMenuMobil] = useState(false);
+    const [menuIsAmount, setMenuIsAmount] = useState(false);
 
+    useEffect(() => {
+        if(showMenuMobil) setMenuIsAmount(true);
+    }, [showMenuMobil])
+
+    const handleCloseMenu = () => {
+        setShowMenuMobil(false);
+        setTimeout(() => {
+            setMenuIsAmount(false);
+        }, 500);
+    }
 
     return (
         <header className="hero relative">
@@ -35,29 +46,31 @@ const Header = () => {
 
             <section className="md:hidden flex justify-between bg-primary p-5 fixed w-full">
                 <h1 className="text-white font-bold">Dr. Daniel Rivera</h1>
-                <button onClick={() => setShowHeader(true)}>
+                <button onClick={() => setShowMenuMobil(true)}>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" color="#fff" strokeWidth={1.5} stroke="currentColor" className="size-6">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
                     </svg>
                 </button>
             </section>
 
-            <section className={`absolute bg-primary w-full h-full z-20 px-7 py-10 ${showHeader ? 'menu-visible' : 'menu-hidden'} md:hidden`}>
-                <div className="flex justify-between items-center">
-                    <p className="text-white uppercase  font-bold text-2xl">Menu</p>
-                    <button onClick={() => setShowHeader(false)}>
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" color="#fff" strokeWidth={1.5} stroke="currentColor" className="size-10">
-                            <path strokeLinecap="round" strokeLinejoin="round" d="m9.75 9.75 4.5 4.5m0-4.5-4.5 4.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-                        </svg>
-                    </button>
-                </div>
-                <nav className="flex flex-col gap-7 justify-center mt-10">
-                    <Link className="bg-white text-primary py-3 text-base text-center font-bold rounded" href="/">Home</Link>
-                    <Link className="bg-white text-primary py-3 text-base text-center font-bold rounded" href="/">Nosotros</Link>
-                    <Link className="bg-white text-primary py-3 text-base text-center font-bold rounded" href="/">Servicios</Link>
-                    <Link className="bg-white text-primary py-3 text-base text-center font-bold rounded" href="/">Contacto</Link>
-                </nav>
-            </section>
+            {menuIsAmount && (
+                <section className={`md:hidden absolute bg-primary w-full h-full z-20 px-7 py-10 ${showMenuMobil ? 'menu-visible' : 'menu-hidden'} `}>
+                    <div className="flex justify-between items-center">
+                        <p className="text-white uppercase  font-bold text-2xl">Menu</p>
+                        <button onClick={handleCloseMenu}>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" color="#fff" strokeWidth={1.5} stroke="currentColor" className="size-10">
+                                <path strokeLinecap="round" strokeLinejoin="round" d="m9.75 9.75 4.5 4.5m0-4.5-4.5 4.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                            </svg>
+                        </button>
+                    </div>
+                    <nav className="flex flex-col gap-7 justify-center mt-10">
+                        <Link className="bg-white text-primary py-3 text-base text-center font-bold rounded" href="/">Home</Link>
+                        <Link className="bg-white text-primary py-3 text-base text-center font-bold rounded" href="/">Nosotros</Link>
+                        <Link className="bg-white text-primary py-3 text-base text-center font-bold rounded" href="/">Servicios</Link>
+                        <Link className="bg-white text-primary py-3 text-base text-center font-bold rounded" href="/">Contacto</Link>
+                    </nav>
+                </section>
+            )}
 
             <section className="flex flex-col contenedor justify-start md:justify-center h-full">
                 {/* Text Hero */}
@@ -75,7 +88,7 @@ const Header = () => {
 
                 {/* Images Hero */}
                 <div className="absolute bottom-0 right-[18%]">
-                    <Image className=" md:w-auto -z-10" src="/images/doctor-hero.webp" width={350} height={0} alt="Doctor Estetoscopio" />
+                    <Image className="  -z-10" src="/images/doctor-hero.webp" width={300} height={0} alt="Doctor Estetoscopio" />
                 </div>
 
             </section>
@@ -87,7 +100,7 @@ const Header = () => {
             </div>
 
             {/* Widget */}
-            <div className="w-auto bg-white absolute bottom-[45%] right-[4%] p-4 rounded-2xl shadow-2xl  flex-col gap-3 hidden md:flex">
+            <div className="w-auto bg-white absolute bottom-[55%] right-[3%] p-4 rounded-2xl shadow-2xl  flex-col gap-3 hidden md:flex">
                 <p className="text-xl font-bold">Octubre, 2025</p>
                 <div>
                     <ul className="flex gap-4">
@@ -124,7 +137,7 @@ const Header = () => {
             </div>
 
             {/* Widget */}
-            <div className="w-auto bg-white absolute bottom-[55%] right-[37%] p-4 rounded-2xl shadow-2xl  flex-col gap-2 hidden md:flex">
+            <div className="w-auto bg-white absolute bottom-[55%] right-[33%] p-4 rounded-2xl shadow-2xl  flex-col gap-2 hidden md:flex">
                 <div className="flex">
                     <Image className="rounded-full border-2 border-white" src="/images/people1.webp" width={50} height={50} alt="Persona1" />
                     <Image className="rounded-full border-2 border-white -ml-4" src="/images/people2.webp" width={50} height={50} alt="Persona2" />

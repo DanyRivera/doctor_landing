@@ -2,6 +2,7 @@
 
 @theme {
   --color-primary: #1E40AF;
+  --color-secondary: #f5f9ff;
 }
 
 :root {
@@ -37,6 +38,7 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
+  background-position: fixed;
 }
 
 .contenedor {

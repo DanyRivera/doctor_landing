@@ -3,7 +3,8 @@
 import Image from "next/image"
 import Link from "next/link"
 import { useState, useEffect } from "react"
-import Buble from "./ui/buble"
+import Buble from "./ui/buble";
+import Buble2 from "./ui/buble2";
 
 const Header = () => {
 
@@ -152,6 +153,7 @@ const Header = () => {
 
             <Buble className="bottom-[20%] right-[10%]" />
             <Buble className="bottom-[85%] md:bottom-[80%] right-[50%]" />
+            <Buble2 className="bottom-[20%] md:bottom-[20%] right-[50%] hidden md:block" />
 
         </header>
     )

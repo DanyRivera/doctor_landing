@@ -1,8 +1,9 @@
 import Image from "next/image"
+import Buble2 from "./ui/buble2"
 
 const Services = () => {
     return (
-        <section className="bg-secondary mt-20 mb-14 py-18">
+        <section className="bg-secondary mt-20 mb-14 py-18 relative">
             <div className="contenedor flex flex-col gap-4">
                 <h2 className="text-center font-bold text-2xl uppercase">Servicios</h2>
                 <p className="text-center mx-5 text-gray-500 md:w-1/2 md:mx-auto">En esta sección encontrarás los servicios médicos que el Dr. Daniel Rivera pone a tu disposición, diseñados para ofrecer atención integral y de calidad.</p>
@@ -32,6 +33,9 @@ const Services = () => {
                     </div>
                 </div>
             </div>
+
+            <Buble2 className="top-24 right-38 hidden md:block" />
+            <Buble2 className="bottom-32 left-28 hidden md:block" />
         </section>
     )
 }

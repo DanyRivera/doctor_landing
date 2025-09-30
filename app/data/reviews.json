@@ -1,0 +1,45 @@
+[
+  {
+    "name": "Rebeca Philips",
+    "location": "London, UK",
+    "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    "image": "people1"
+  },
+  {
+    "name": "John Doe",
+    "location": "New York, USA",
+    "text": "Possimus harum distinctio ab temporibus voluptas laborum iure.",
+    "image": "people2"
+  },
+  {
+    "name": "Jane Smith",
+    "location": "Toronto, CA",
+    "text": "Repellat architecto doloremque quos, labore necessitatibus.",
+    "image": "people3"
+  },
+  {
+    "name": "Carlos López",
+    "location": "CDMX, MX",
+    "text": "Quaerat nam nemo nisi. Perspiciatis, eveniet est?",
+    "image": "people4"
+  },
+  {
+    "name": "Alicia Gómez",
+    "location": "Madrid, ES",
+    "text": "Ducimus error temporibus sint beatae sit amet.",
+    "image": "people5"
+  },
+  {
+    "name": "William Johnson",
+    "location": "Berlin, DE",
+    "text": "Veniam debitis fuga accusamus fugiat repellendus.",
+    "image": "people1"
+  },
+  
+  {
+    "name": "William Johnson",
+    "location": "Berlin, DE",
+    "text": "Veniam debitis fuga accusamus fugiat repellendus.",
+    "image": "people2"
+  }
+]

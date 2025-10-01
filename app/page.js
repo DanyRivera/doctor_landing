@@ -4,6 +4,8 @@ import Services from "@/components/Services";
 import Skills from "@/components/Skills";
 import Appointment from "@/components/Appointment";
 import Reviews from "@/components/Reviews";
+import Contact from "@/components/Contact";
+import Footer from "@/components/ui/Footer";
 
 export default function Home() {
   return (
@@ -14,6 +16,8 @@ export default function Home() {
       <Skills />
       <Appointment />
       <Reviews />
+      <Contact />
+      <Footer />
     </>
   );
 }

@@ -5,7 +5,7 @@ import Skills from "@/components/Skills";
 import Appointment from "@/components/Appointment";
 import Reviews from "@/components/Reviews";
 import Contact from "@/components/Contact";
-import Footer from "@/components/ui/Footer";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (

@@ -1,10 +1,11 @@
 'use client'
 
 import Image from "next/image"
-import Link from "next/link"
+// import Link from "next/link"
 import { useState, useEffect } from "react"
 import Buble from "./ui/buble";
 import Buble2 from "./ui/buble2";
+import  {Link, scroller} from "react-scroll";
 
 const Header = () => {
 
@@ -22,6 +23,19 @@ const Header = () => {
         }, 500);
     }
 
+    const handleClickMenuMobil = (element, offset) => {
+        setShowMenuMobil(false);
+
+        setTimeout(() => {
+            setMenuIsAmount(false);
+            scroller.scrollTo(element, {
+                smooth: true,
+                duration: 2500,
+                offset: offset
+            })
+        }, 350);
+    }
+
     return (
         <header className="hero relative">
             <section className="justify-between items-center text-center pt-10 hidden md:flex">
@@ -34,15 +48,15 @@ const Header = () => {
                 {/* Menu */}
                 <div className="w-full">
                     <nav className="flex gap-20 justify-center text-xl ">
-                        <Link href="/">Home</Link>
-                        <Link href="/">Nosotros</Link>
-                        <Link href="/">Servicios</Link>
+                        <Link className="cursor-pointer" to="experiencia" smooth={true} duration={2500} offset={-50}>Experiencia</Link>
+                        <Link className="cursor-pointer" to="nosotros"  smooth={true} duration={2500} offset={-250}>Nosotros</Link>
+                        <Link className="cursor-pointer" to="servicios" smooth={true} duration={2500} offset={-150}>Servicios</Link>
                     </nav>
                 </div>
 
                 {/* Btn Contact */}
                 <div className="w-full">
-                    <Link href="/" className="border border-primary text-primary px-10 py-4 rounded-full tracking-wide font-bold z-10">Contacto</Link>
+                    <Link to="contacto" smooth={true} duration={2500} className="border border-primary text-primary px-10 py-4 rounded-full tracking-wide font-bold z-10">Contacto</Link>
                 </div>
             </section>
 
@@ -66,10 +80,10 @@ const Header = () => {
                         </button>
                     </div>
                     <nav className="flex flex-col gap-7 justify-center mt-10">
-                        <Link className="bg-white text-primary py-3 text-base text-center font-bold rounded" href="/">Home</Link>
-                        <Link className="bg-white text-primary py-3 text-base text-center font-bold rounded" href="/">Nosotros</Link>
-                        <Link className="bg-white text-primary py-3 text-base text-center font-bold rounded" href="/">Servicios</Link>
-                        <Link className="bg-white text-primary py-3 text-base text-center font-bold rounded" href="/">Contacto</Link>
+                        <button onClick={() => handleClickMenuMobil('experiencia', -20)} className="bg-white cursor-pointer text-primary py-3 text-base text-center font-bold rounded" >Experiencia</button>
+                        <Link  onClick={() => handleClickMenuMobil('nosotros', -90)} className="bg-white cursor-pointer text-primary py-3 text-base text-center font-bold rounded" >Nosotros</Link>
+                        <Link onClick={() => handleClickMenuMobil('servicios', -20)} className="bg-white cursor-pointer text-primary py-3 text-base text-center font-bold rounded" >Servicios</Link>
+                        <Link onClick={() => handleClickMenuMobil('contacto', -20)} className="bg-white cursor-pointer text-primary py-3 text-base text-center font-bold rounded" >Contacto</Link>
                     </nav>
                 </section>
             )}
@@ -84,7 +98,7 @@ const Header = () => {
                     </div>
                     <p className="md:text-xl md:w-3/5 text-gray-500">Tu bienestar de manñana empeiza con las acciones de hoy, tu salud, nuetra experiencia, realiza una cita.</p>
                     <div className="md:mt-5 mt-0">
-                        <Link href="/" className="bg-primary text-white px-8 md:px-16 py-5 rounded-full tracking-wide font-bold text-sm md:text-lg block text-center md:inline-block">Reliza una Cita</Link>
+                        <button className="bg-primary text-white px-8 md:px-16 py-5 rounded-full tracking-wide font-bold text-sm md:text-lg block text-center md:inline-block">Reliza una Cita</button>
                     </div>
                 </div>
 

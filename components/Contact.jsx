@@ -29,7 +29,7 @@ const Contact = () => {
                                     <label htmlFor="msg" className="text-gray-700">Mensaje:</label>
                                     <textarea className="outline-none px-5 py-5 bg-white rounded-full text-base" name="msg" id="msg" placeholder="Escribe el motivo de contacto"></textarea>
                                 </div>
-                                <input type="submit" className="bg-primary text-white py-3 rounded-full text-center mt-5" value="Enviar Mensaje" />
+                                <input type="submit" className="bg-primary text-white py-3 md:py-5 rounded-full text-center mt-5" value="Enviar Mensaje" />
                             </form>
                         </div>
                         <div className="flex flex-col gap-5 justify-center items-center md:col-span-2">

@@ -5,7 +5,8 @@ import Image from "next/image"
 import { useState, useEffect } from "react"
 import Buble from "./ui/buble";
 import Buble2 from "./ui/buble2";
-import  {Link, scroller} from "react-scroll";
+import { Link, scroller } from "react-scroll";
+import { motion } from "framer-motion"
 
 const Header = () => {
 
@@ -38,26 +39,32 @@ const Header = () => {
 
     return (
         <header className="hero relative">
-            <section className="justify-between items-center text-center pt-10 hidden md:flex">
+            <section className="justify-between items-center text-center pt-10 hidden md:flex w-full md:px-40">
                 {/* Page Name */}
-                <div className="w-full flex items-center gap-2 mx-auto justify-center ">
+                <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 0.8 }} className=" flex items-center gap-2  justify-center w-1/4">
                     <Image src="/images/doctor-icon.svg" width={70} height={70} alt="Doctor Hero Icon" />
                     <p className="text-2xl font-bold">Dr. Daniel Rivera</p>
-                </div>
+                </motion.div>
 
                 {/* Menu */}
-                <div className="w-full">
+                <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 0.8 }} className="w-full">
                     <nav className="flex gap-20 justify-center text-xl ">
-                        <Link className="cursor-pointer" to="experiencia" smooth={true} duration={2500} offset={-50}>Experiencia</Link>
-                        <Link className="cursor-pointer" to="nosotros"  smooth={true} duration={2500} offset={-250}>Nosotros</Link>
-                        <Link className="cursor-pointer" to="servicios" smooth={true} duration={2500} offset={-150}>Servicios</Link>
+                        <motion.button whileHover={{ y: -3 }}>
+                            <Link className="cursor-pointer" to="experiencia" smooth={true} duration={2500} offset={-50}>Experiencia</Link>
+                        </motion.button>
+                        <motion.button whileHover={{ y: -3 }}>
+                            <Link className="cursor-pointer" to="nosotros" smooth={true} duration={2500} offset={-250}>Nosotros</Link>
+                        </motion.button>
+                        <motion.button whileHover={{ y: -3 }}>
+                            <Link className="cursor-pointer" to="servicios" smooth={true} duration={2500} offset={-150}>Servicios</Link>
+                        </motion.button>
                     </nav>
-                </div>
+                </motion.div>
 
                 {/* Btn Contact */}
-                <div className="w-full">
-                    <Link to="contacto" smooth={true} duration={2500} className="border border-primary text-primary px-10 py-4 rounded-full tracking-wide font-bold z-10">Contacto</Link>
-                </div>
+                <motion.button initial={{ opacity: 0, x: 100 }} whileInView={{ opacity: 1, x: 0 }} whileHover={{ scale: 1.1 }} transition={{ duration: 0.8 }} className="">
+                    <Link to="contacto" smooth={true} duration={2500} className="border border-primary text-primary px-10 py-4 rounded-full tracking-wide font-bold z-10 hover:bg-primary hover:text-white hover:shadow-2xl transition-all cursor-pointer">Contacto</Link>
+                </motion.button>
             </section>
 
             <section className="md:hidden flex justify-between bg-primary p-5 fixed w-full z-10">
@@ -81,7 +88,7 @@ const Header = () => {
                     </div>
                     <nav className="flex flex-col gap-7 justify-center mt-10">
                         <button onClick={() => handleClickMenuMobil('experiencia', -20)} className="bg-white cursor-pointer text-primary py-3 text-base text-center font-bold rounded" >Experiencia</button>
-                        <Link  onClick={() => handleClickMenuMobil('nosotros', -90)} className="bg-white cursor-pointer text-primary py-3 text-base text-center font-bold rounded" >Nosotros</Link>
+                        <Link onClick={() => handleClickMenuMobil('nosotros', -90)} className="bg-white cursor-pointer text-primary py-3 text-base text-center font-bold rounded" >Nosotros</Link>
                         <Link onClick={() => handleClickMenuMobil('servicios', -20)} className="bg-white cursor-pointer text-primary py-3 text-base text-center font-bold rounded" >Servicios</Link>
                         <Link onClick={() => handleClickMenuMobil('contacto', -20)} className="bg-white cursor-pointer text-primary py-3 text-base text-center font-bold rounded" >Contacto</Link>
                     </nav>
@@ -90,7 +97,7 @@ const Header = () => {
 
             <section className="flex flex-col justify-start md:justify-center">
                 {/* Text Hero */}
-                <div className="flex flex-col justify-center gap-5 md:gap-10 mt-36 md:mt-0 mx-5 md:mx-0 absolute bottom-[53%] md:bottom-[25%] left-0 md:left-[10%]">
+                <motion.div initial={{ opacity: 0, x: -350 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.8 }} className="flex flex-col justify-center gap-5 md:gap-10 mt-36 md:mt-0 mx-5 md:mx-0 absolute bottom-[53%] md:bottom-[25%] left-0 md:left-[10%]">
                     <h1 className="text-2xl md:text-7xl font-bold">Bienbenido a</h1>
                     <div className="flex gap-5 items-center -mt-5 md:-mt-10">
                         <Image src="/images/icon-1-hero.svg" className="hidden md:block md:w-1/7" width={120} height={120} alt="Doctor Estetoscopio" />
@@ -100,23 +107,23 @@ const Header = () => {
                     <div className="md:mt-5 mt-0">
                         <button className="bg-primary text-white px-8 md:px-16 py-5 rounded-full tracking-wide font-bold text-sm md:text-lg block text-center md:inline-block">Reliza una Cita</button>
                     </div>
-                </div>
+                </motion.div>
 
                 {/* Images Hero */}
-                <div className="absolute bottom-0 right-[18%]">
+                <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 0.8 }} className="absolute bottom-0 right-[18%]">
                     <Image className=" -z-10" src="/images/doctor-hero.webp" width={250} height={0} alt="Doctor Estetoscopio" />
-                </div>
+                </motion.div>
 
             </section>
 
 
             {/* Widget */}
-            <div className="w-auto bg-white absolute bottom-[10%] right-[37%] p-4 rounded-2xl shadow-2xl hidden md:block">
+            <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 0.8 }} className="w-auto bg-white absolute bottom-[10%] right-[37%] p-4 rounded-2xl shadow-2xl hidden md:block">
                 <Image className="" src="/images/icon-2-hero.svg" width={50} height={50} alt="Doctor Jeringa" />
-            </div>
+            </motion.div>
 
             {/* Widget */}
-            <div className="w-auto bg-white absolute bottom-[55%] right-[3%] p-4 rounded-2xl shadow-2xl  flex-col gap-3 hidden md:flex">
+            <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 0.8 }} className="w-auto bg-white absolute bottom-[55%] right-[3%] p-4 rounded-2xl shadow-2xl  flex-col gap-3 hidden md:flex">
                 <p className="text-xl font-bold">Octubre, 2025</p>
                 <div>
                     <ul className="flex gap-4">
@@ -150,10 +157,10 @@ const Header = () => {
                         </li>
                     </ul>
                 </div>
-            </div>
+            </motion.div>
 
             {/* Widget */}
-            <div className="w-auto bg-white absolute bottom-[55%] right-[33%] p-4 rounded-2xl shadow-2xl  flex-col gap-2 hidden md:flex">
+            <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} className="w-auto bg-white absolute bottom-[55%] right-[33%] p-4 rounded-2xl shadow-2xl  flex-col gap-2 hidden md:flex">
                 <div className="flex">
                     <Image className="rounded-full border-2 border-white" src="/images/people1.webp" width={50} height={50} alt="Persona1" />
                     <Image className="rounded-full border-2 border-white -ml-4" src="/images/people2.webp" width={50} height={50} alt="Persona2" />
@@ -163,7 +170,7 @@ const Header = () => {
                 </div>
                 <p className="text-3xl font-bold">100k+</p>
                 <p>Pacientes Satisfechos</p>
-            </div>
+            </motion.div>
 
             <Buble className="bottom-[20%] right-[10%]" />
             <Buble className="bottom-[85%] md:bottom-[80%] right-[50%]" />

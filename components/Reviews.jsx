@@ -1,13 +1,14 @@
 import Buble from "./ui/buble";
 import Buble2 from "./ui/buble2";
 import Slider from "./ui/Slider";
+import * as motion from "motion/react-client"
 
 const Reviews = () => {
     return (
         <section className="my-12 md:mt-12 md:mb-80 py-18  md:mx-0">
             <div className=" flex flex-col gap-4 md:relative md:mx-52 md:h-96 ">
-                <h2 className="text-center font-bold text-2xl uppercase ">Lo que nuestros Pacientes Dicen</h2>
-                <p className="text-center mx-5 text-gray-500 md:w-1/2 md:mx-auto">El Dr. Daniel Rivera tiene a muchos pacientes satisfechos, contentos con nuestro servicio.</p>
+                <motion.h2 initial={{opacity: 0}} whileInView={{opacity: 1}} transition={{duration: 0.8}} className="text-center font-bold text-2xl uppercase ">Lo que nuestros Pacientes Dicen</motion.h2>
+                <motion.p initial={{opacity: 0}} whileInView={{opacity: 1}} transition={{duration: 0.8}} className="text-center mx-5 text-gray-500 md:w-1/2 md:mx-auto">El Dr. Daniel Rivera tiene a muchos pacientes satisfechos, contentos con nuestro servicio.</motion.p>
 
                 <Slider />
 

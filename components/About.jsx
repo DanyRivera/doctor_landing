@@ -10,11 +10,11 @@ const About = () => {
         <Element name="nosotros">
             <section className="contenedor md:!my-34 my-10 mx-7 flex flex-col gap-22 md:grid grid-cols-6 md:grid-rows-1 md:relative md:gap-24">
                 <div className="flex flex-col gap-5 md:col-start-4 md:col-end-7">
-                    <motion.h2 initial={{ opacity: 0, x: 100 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.8 }} className="text-3xl font-bold text-start">Dr. Daniel Rivera</motion.h2>
-                    <motion.p initial={{ opacity: 0, x: 100 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.8 }} className="text-start">Con una trayectoria dedicada al cuidado de la salud y el bienestar, el Dr. Daniel Rivera ofrece atención médica integral basada en la confianza, la ética y el compromiso con cada paciente. Su objetivo es brindar diagnósticos precisos, tratamientos efectivos y un acompañamiento cercano para mejorar la calidad de vida de quienes confían en su experiencia.</motion.p>
-                    <motion.p initial={{ opacity: 0, x: 100 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.8 }} className="text-start">Con años de experiencia y actualización constante en las últimas técnicas médicas, el Dr. Daniel Rivera se compromete a ofrecer un servicio de calidad que combina conocimiento científico con atención humana. </motion.p>
+                    <motion.h2 initial={{ opacity: 0}} whileInView={{ opacity: 1}} viewport={{once:true}} transition={{ duration: 0.8, delay: 0.5 }} className="text-3xl font-bold text-start">Dr. Daniel Rivera</motion.h2>
+                    <motion.p initial={{ opacity: 0}} whileInView={{ opacity: 1}} viewport={{once:true}} transition={{ duration: 0.8, delay: 0.6 }} className="text-start">Con una trayectoria dedicada al cuidado de la salud y el bienestar, el Dr. Daniel Rivera ofrece atención médica integral basada en la confianza, la ética y el compromiso con cada paciente. Su objetivo es brindar diagnósticos precisos, tratamientos efectivos y un acompañamiento cercano para mejorar la calidad de vida de quienes confían en su experiencia.</motion.p>
+                    <motion.p initial={{ opacity: 0}} whileInView={{ opacity: 1}} viewport={{once:true}} transition={{ duration: 0.8, delay: 0.8 }} className="text-start">Con años de experiencia y actualización constante en las últimas técnicas médicas, el Dr. Daniel Rivera se compromete a ofrecer un servicio de calidad que combina conocimiento científico con atención humana. </motion.p>
                     <motion.button
-                        initial={{ opacity: 0, x: 100 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.8 }}
+                        initial={{ opacity: 0}} whileInView={{ opacity: 1}} viewport={{once:true}} transition={{ duration: 0.8, delay: 1 }}
                         className="text-white bg-primary py-4 rounded-full px-10 font-bold mx-auto text-sm md:w-2/5 md:mx-0"
                     >Realizar una Cita</motion.button>
                 </div>
@@ -28,11 +28,11 @@ const About = () => {
                         <p>9 Años de experiencia</p>
                     </motion.div>
 
-                    <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 0.8 }}>
+                    <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1, delay: 4 }}>
                         <Image className="absolute  -bottom-7 right-[10%] bg-white p-3 shadow-2xl rounded-2xl" src="/images/heart.svg" width={70} height={0} alt="Heart" />
                     </motion.div >
 
-                    <motion.div initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="bg-white  rounded-2xl shadow-2xl absolute p-3 -top-3 flex flex-col gap-1 md:-top-10 ">
+                    <motion.div initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8}} className="bg-white  rounded-2xl shadow-2xl absolute p-3 -top-3 flex flex-col gap-1 md:-top-10 ">
                         <ul className="flex gap-1">
                             <li>
                                 <Image className="" src="/images/start.svg" width={20} height={0} alt="Circles" />

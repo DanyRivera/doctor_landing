@@ -67,7 +67,7 @@ const Header = () => {
                 </motion.button>
             </section>
 
-            <section className="md:hidden flex justify-between bg-primary p-5 fixed  z-10">
+            <section className="md:hidden flex justify-between bg-primary p-5 fixed w-full z-10">
                 <h1 className="text-white font-bold">Dr. Daniel Rivera</h1>
                 <button onClick={() => setShowMenuMobil(true)}>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" color="#fff" strokeWidth={1.5} stroke="currentColor" className="size-6">

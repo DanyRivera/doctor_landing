@@ -111,7 +111,7 @@ const Header = () => {
 
                 {/* Images Hero */}
                 <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 0.8 }} className="absolute bottom-0 right-[18%]">
-                    <Image className=" -z-10" src="/images/doctor-hero.webp" width={250} height={0} alt="Doctor Estetoscopio" />
+                    <Image className=" -z-10" src="/images/doctor-hero.webp" width={235} height={0} alt="Doctor Estetoscopio" />
                 </motion.div>
 
             </section>

@@ -10,6 +10,7 @@ export default function RootLayout({ children }) {
         <meta name="keywords" content="landindg, doctor" />
         <meta name="author" content="Dany Rivera" />
         <link rel="icon" href="/logo.webp" />
+        <link rel="apple-touch-icon" href="/logo-app.png"></link>
       </head>
       <body
         

@@ -98,12 +98,12 @@ const Header = () => {
             <section className="flex flex-col justify-start md:justify-center">
                 {/* Text Hero */}
                 <motion.div initial={{ opacity: 0, x: -350 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.8 }} className="flex flex-col justify-center gap-5 md:gap-10 mt-36 md:mt-0 mx-5 md:mx-0 absolute bottom-[53%] md:bottom-[25%] left-0 md:left-[10%]">
-                    <h1 className="text-2xl md:text-7xl font-bold">Bienbenido a</h1>
+                    <h1 className="text-2xl md:text-7xl font-bold">Bienvenido a</h1>
                     <div className="flex gap-5 items-center -mt-5 md:-mt-10">
                         <Image src="/images/icon-1-hero.svg" className="hidden md:block md:w-1/7" width={120} height={120} alt="Doctor Estetoscopio" />
                         <h1 className="text-2xl md:text-7xl font-bold z-0">Dr. Daniel Rivera</h1>
                     </div>
-                    <p className="md:text-xl md:w-3/5 text-gray-500">Tu bienestar de manñana empeiza con las acciones de hoy, tu salud, nuetra experiencia, realiza una cita.</p>
+                    <p className="md:text-xl md:w-3/5 text-gray-500">Tu bienestar de mañana empieza con las acciones de hoy, tu salud, nuetra experiencia, realiza una cita.</p>
                     <div className="md:mt-5 mt-0">
                         <button className="bg-primary text-white px-8 md:px-16 py-5 rounded-full tracking-wide font-bold text-sm md:text-lg block text-center md:inline-block">Reliza una Cita</button>
                     </div>

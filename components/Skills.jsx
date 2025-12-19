@@ -15,12 +15,12 @@ const Skills = () => {
                     <motion.p initial={{opacity: 0}} whileInView={{opacity: 1}} transition={{duration: 0.8}} className="text-center mx-5 text-gray-500 md:w-1/2 md:mx-auto">El Dr. Daniel Rivera combina años de práctica médica con una actualización constante en las últimas técnicas y avances en salud.</motion.p>
                     <div className="flex flex-col gap-20 items-center mt-10 md:grid md:grid-cols-9 md:gap-40">
                         <div className="flex flex-col  gap-10 md:col-start-1 md:col-end-4">
-                            <motion.div initial={{opacity: 0, x: -100}} whileInView={{opacity: 1, x: 0}} transition={{duration: 0.8}} className="bg-white shadow-2xl p-5 rounded-2xl">
+                            <motion.div initial={{opacity: 0, x: -100}} whileInView={{opacity: 1, x: 0}} transition={{duration: 0.8}} viewport={{once: true}} className="bg-white shadow-2xl p-5 rounded-2xl">
                                 <h3 className="text-xl text-primary font-bold">Medical Officer</h3>
                                 <p className="text-gray-700">Sylhet M. A. G. Osmania Medical College</p>
                                 <p className="text-gray-700 font-bold">2020 - Present</p>
                             </motion.div>
-                            <motion.div initial={{opacity: 0, x: -100}} whileInView={{opacity: 1, x: 0}} transition={{duration: 0.8}} className="bg-white shadow-2xl p-5 rounded-2xl">
+                            <motion.div initial={{opacity: 0, x: -100}} whileInView={{opacity: 1, x: 0}} transition={{duration: 0.8}} viewport={{once: true}} className="bg-white shadow-2xl p-5 rounded-2xl">
                                 <h3 className="text-xl text-primary font-bold">Physiologist</h3>
                                 <p className="text-gray-700">Popular Diagnostic Center, Sylhet</p>
                                 <p className="text-gray-700 font-bold">2020 - Present</p>
@@ -39,6 +39,7 @@ const Skills = () => {
                             <motion.div initial={{opacity: 0, y: 50}} whileInView={{opacity: 1, y: 0}} transition={{duration: 0.8}} className="">
                                 <Image className="absolute right-5 top-20 bg-white p-3 shadow-2xl rounded-2xl md:w-1/4 md:right-0" src="/images/kit.svg" width={70} height={0} alt="Kit" />
                             </motion.div>
+                            
                             <motion.div initial={{opacity: 0, y: 50}} whileInView={{opacity: 1, y: 0}} transition={{duration: 0.8}} className="hidden md:flex flex-col gap-3 absolute -bottom-30 -left-14 bg-white p-4 rounded-2xl shadow-2xl">
                                 <h3 className="text-base text-gray-700">Pacientes Atendidos</h3>
                                 <p className="text-4xl font-bold">6953</p>
@@ -53,12 +54,12 @@ const Skills = () => {
                             </motion.div>
                         </div>
                         <div className="flex flex-col  gap-10 md:col-start-7 md:col-end-10">
-                            <motion.div initial={{opacity: 0, x: 100}} whileInView={{opacity: 1, x: 0}} transition={{duration: 0.8}} className="bg-white shadow-2xl p-5 rounded-2xl">
+                            <motion.div initial={{opacity: 0, x: 100}} whileInView={{opacity: 1, x: 0}} transition={{duration: 0.8}} viewport={{once: true}} className="bg-white shadow-2xl p-5 rounded-2xl">
                                 <h3 className="text-xl text-primary font-bold">Physiologist</h3>
                                 <p className="text-gray-700">Chittagong MEdical Colage, Chittagong</p>
                                 <p className="text-gray-700 font-bold">2020 - Present</p>
                             </motion.div>
-                            <motion.div initial={{opacity: 0, x: 100}} whileInView={{opacity: 1, x: 0}} transition={{duration: 0.8}} className="bg-white shadow-2xl p-5 rounded-2xl">
+                            <motion.div initial={{opacity: 0, x: 100}} whileInView={{opacity: 1, x: 0}} transition={{duration: 0.8}}  viewport={{once: true}}  className="bg-white shadow-2xl p-5 rounded-2xl">
                                 <h3 className="text-xl text-primary font-bold">Head od Physiologist</h3>
                                 <p className="text-gray-700">Dhaka Medical Collage, Dhaka</p>
                                 <p className="text-gray-700 font-bold">2020 - Present</p>

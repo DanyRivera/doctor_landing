@@ -61,7 +61,7 @@ const Slider = () => {
                     <button
                         key={index}
                         onClick={() => goToPage(index)}
-                        className={`w-5 h-5 rounded-full transition-colors cursor-pointer ${index === currentIndex ? "bg-primary" : "bg-secondary"
+                        className={`w-5 h-5 rounded-full transition-colors cursor-pointer border border-primary ${index === currentIndex ? "bg-primary" : "bg-secondary"
                             }`}
                     ></button>
                 ))}

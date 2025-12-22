@@ -15,8 +15,8 @@ export default function Home() {
       <Services /> 
       <Skills /> 
       <Appointment /> 
-      {/* <Reviews /> */}
-      {/* <Contact /> */}
+      <Reviews />
+      {/* <Contact />  */}
     </>
   );
 }

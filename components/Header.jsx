@@ -42,28 +42,28 @@ const Header = () => {
             <section className="justify-between items-center text-center pt-10 hidden md:flex w-full md:px-40">
                 {/* Page Name */}
                 <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 0.8 }} className=" flex items-center gap-2  justify-center w-1/4">
-                    <Image src="/images/doctor-icon.svg" width={70} height={70} alt="Doctor Hero Icon" />
-                    <p className="text-2xl font-bold">Dr. Daniel Rivera</p>
+                    <Image src="/images/doctor-icon.svg" width={70} height={70} alt="Doctor Hero Icon"  className="md:w-1/4"/>
+                    <p className="text-2xl font-bold md:text-lg">Dr. Daniel Rivera</p>
                 </motion.div>
 
                 {/* Menu */}
                 <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 0.8 }} className="w-full">
                     <nav className="flex gap-20 justify-center text-xl ">
                         <motion.button whileHover={{ y: -3 }}>
-                            <Link className="cursor-pointer" to="experiencia" smooth={true} duration={2500} offset={-50}>Experiencia</Link>
+                            <Link className="cursor-pointer md:text-base" to="experiencia" smooth={true} duration={2500} offset={-50}>Experiencia</Link>
                         </motion.button>
                         <motion.button whileHover={{ y: -3 }}>
-                            <Link className="cursor-pointer" to="nosotros" smooth={true} duration={2500} offset={-250}>Nosotros</Link>
+                            <Link className="cursor-pointer md:text-base" to="nosotros" smooth={true} duration={2500} offset={-250}>Nosotros</Link>
                         </motion.button>
                         <motion.button whileHover={{ y: -3 }}>
-                            <Link className="cursor-pointer" to="servicios" smooth={true} duration={2500} offset={-150}>Servicios</Link>
+                            <Link className="cursor-pointer md:text-base" to="servicios" smooth={true} duration={2500} offset={-150}>Servicios</Link>
                         </motion.button>
                     </nav>
                 </motion.div>
 
                 {/* Btn Contact */}
                 <motion.button initial={{ opacity: 0, x: 100 }} whileInView={{ opacity: 1, x: 0 }} whileHover={{ scale: 1.1 }} transition={{ duration: 0.8 }} className="">
-                    <Link to="contacto" smooth={true} duration={2500} className="border border-primary text-primary px-10 py-4 rounded-full tracking-wide font-bold z-10 hover:bg-primary hover:text-white hover:shadow-2xl transition-all cursor-pointer">Contacto</Link>
+                    <Link to="contacto" smooth={true} duration={2500} className="border border-primary text-primary px-10 py-4 rounded-full tracking-wide font-bold z-10 hover:bg-primary hover:text-white hover:shadow-2xl transition-all cursor-pointer md:text-base">Contacto</Link>
                 </motion.button>
             </section>
 
@@ -98,14 +98,14 @@ const Header = () => {
             <section className="flex flex-col justify-start md:justify-center">
                 {/* Text Hero */}
                 <motion.div initial={{ opacity: 0, x: -350 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.8 }} className="flex flex-col justify-center gap-5 md:gap-10 mt-36 md:mt-0 mx-5 md:mx-0 absolute bottom-[53%] md:bottom-[25%] left-0 md:left-[10%]">
-                    <h1 className="text-2xl md:text-7xl font-bold">Bienvenido a</h1>
+                    <h1 className="text-2xl md:text-6xl font-bold">Bienvenido a</h1>
                     <div className="flex gap-5 items-center -mt-5 md:-mt-10">
-                        <Image src="/images/icon-1-hero.svg" className="hidden md:block md:w-1/7" width={120} height={120} alt="Doctor Estetoscopio" />
-                        <h1 className="text-2xl md:text-7xl font-bold z-0">Dr. Daniel Rivera</h1>
+                        <Image src="/images/icon-1-hero.svg" className="hidden md:block md:w-1/12" width={120} height={120} alt="Doctor Estetoscopio" />
+                        <h1 className="text-2xl md:text-6xl font-bold z-0">Dr. Daniel Rivera</h1>
                     </div>
-                    <p className="md:text-xl md:w-3/5 text-gray-500">Tu bienestar de mañana empieza con las acciones de hoy, tu salud, nuetra experiencia, realiza una cita.</p>
+                    <p className="md:text-base md:w-3/5 text-gray-500">Tu bienestar de mañana empieza con las acciones de hoy, tu salud, nuetra experiencia, realiza una cita.</p>
                     <div className="md:mt-5 mt-0">
-                        <button className="bg-primary text-white px-8 md:px-16 py-5 rounded-full tracking-wide font-bold text-sm md:text-lg block text-center md:inline-block">Reliza una Cita</button>
+                        <button className="bg-primary text-white px-8 md:px-16 py-5 rounded-full tracking-wide font-bold text-sm md:text-base block text-center md:inline-block ">Reliza una Cita</button>
                     </div>
                 </motion.div>
 
@@ -173,7 +173,7 @@ const Header = () => {
             </motion.div>
 
             <Buble className="bottom-[20%] right-[10%]" />
-            <Buble className="bottom-[85%] md:bottom-[80%] right-[50%]" />
+            <Buble className="bottom-[85%] md:bottom-[70%] right-[55%]" />
             <Buble2 className="bottom-[20%] md:bottom-[20%] right-[50%] hidden md:block" />
 
         </header>
